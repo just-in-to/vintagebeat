@@ -48,7 +48,8 @@ nav a:hover{color:var(--red)}
 .logo{width:min(560px,100%)}
 .tag{font-family:var(--hand);font-size:clamp(20px,2.6vw,28px);margin-top:6px;border-bottom:3px solid var(--ink);display:inline-block;padding-right:40px;transform:rotate(-1.5deg)}
 .lead{font-weight:900;font-family:'Noto Sans JP',sans-serif;font-size:clamp(19px,2.4vw,26px);letter-spacing:.12em;line-height:1.8;margin-top:28px}
-.sub{font-size:14px;margin-top:16px;max-width:440px}
+.sub{font-size:14px;margin-top:16px;max-width:620px}
+.pc{display:inline}
 .stamp{position:absolute;font-family:var(--type);color:var(--red);border:2px solid var(--red);border-radius:50%;padding:14px 22px;text-align:center;line-height:1.35;font-size:12px;transform:rotate(-10deg)}
 .tagrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .tagrow .stamp{position:static;flex:none}
@@ -88,13 +89,11 @@ h2 .r{color:var(--red)}
 
 /* gallery */
 .gallery{background:var(--paper2)}
-.collage{display:grid;grid-template-columns:repeat(12,1fr);gap:26px;margin-top:20px}
-.collage .polaroid:nth-child(1){grid-column:1/6;transform:rotate(-2deg)}
-.collage .polaroid:nth-child(2){grid-column:6/10;transform:rotate(2deg);margin-top:30px}
-.collage .polaroid:nth-child(3){grid-column:10/13;transform:rotate(-3deg)}
-.collage .polaroid:nth-child(4){grid-column:2/6;transform:rotate(1.5deg)}
-.collage .polaroid:nth-child(5){grid-column:6/9;transform:rotate(-2deg)}
-.collage .polaroid:nth-child(6){grid-column:9/13;transform:rotate(2.5deg);margin-top:20px}
+.collage{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px;margin-top:20px}
+.collage .polaroid img{aspect-ratio:4/5}
+.collage .polaroid:nth-child(odd){transform:rotate(-1.6deg)}
+.collage .polaroid:nth-child(even){transform:rotate(1.4deg);margin-top:18px}
+.collage .polaroid:nth-child(3n){transform:rotate(-.8deg)}
 .sticker{position:absolute;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--poster);line-height:1;transform:rotate(-12deg);z-index:2}
 .sticker.oneof{background:var(--red);color:#fff;width:110px;height:110px;font-size:18px;right:4%;top:60px}
 
@@ -143,8 +142,9 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
   .note{max-width:260px}
   .concept-side .polaroid:nth-child(2){margin-top:0;max-width:300px;justify-self:end}
   .hero .polaroid{max-width:300px}
-  .collage{grid-template-columns:1fr 1fr;gap:18px}
-  .collage .polaroid:nth-child(n){grid-column:auto;margin-top:0}
+  .collage{grid-template-columns:1fr 1fr;gap:24px 16px}
+  .collage .polaroid:nth-child(n){margin-top:0}
+  .pc{display:none}
   .sticker.oneof{width:84px;height:84px;font-size:14px;top:30px}
   section{padding:60px 0}
   .polaroid figcaption{font-size:13px}
@@ -172,13 +172,13 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
       <h1><img class="logo" src="images/logo.png" alt="vintage beat" width="640" height="244"></h1>
       <div class="tagrow"><div class="tag">old vibes, new moves.</div><div class="stamp">just in!<br>new arrival.</div></div>
       <p class="lead">古着 × ビートカルチャー。<br>自分らしく踊れる、わたしだけの一点を。</p>
-      <p class="sub">音楽があって、リズムがあって、ファッションがある。vintage beat は、ダンスとストリートを愛する女の子のための古着セレクトショップ。今すぐ着て、今すぐ魅せたい服、ここにある。</p>
+      <p class="sub">音楽があって、リズムがあって、ファッションがある。<br class="pc">vintage beat は、ダンスとストリートを愛する女の子のための古着セレクトショップ。<br class="pc">今すぐ着て、今すぐ魅せたい服、ここにある。</p>
       <div class="btns">
         <a class="btn red" href="https://vintagebeat.official.ec/" target="_blank" rel="noopener">ONLINE SHOP →</a>
         <a class="btn" href="https://www.instagram.com/vintage_beat_mode/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-    <figure class="polaroid"><img src="images/hero.jpg" alt="ステージで踊る、ナンバリングTシャツの女の子" width="536" height="780"><figcaption>feel the beat!</figcaption></figure>
+    <figure class="polaroid"><img src="images/hero.jpg" alt="ステージで踊る、ナンバリングTシャツの女の子" width="792" height="1092"><figcaption>feel the beat!</figcaption></figure>
   </div>
 </section>
 
@@ -196,7 +196,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     </div>
     <div class="concept-side reveal">
       <div class="note">vintage<br>beat culture<br>dance<br>street<br>one of a kind<br>self expression<br>90's vibe<br>girl power<br>mix style<br>new arrival ♡</div>
-      <figure class="polaroid"><img src="images/vinyl.jpg" alt="レコードが並ぶ棚" width="480" height="276" style="--ar:4/3"><figcaption>style isn't bought.<br>it's found.</figcaption></figure>
+      <figure class="polaroid"><img src="images/newin.jpg" alt="「just in! NEW IN.」のネオンサイン" width="390" height="438" style="--ar:4/5"><figcaption>style isn't bought.<br>it's found.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -207,12 +207,12 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
     <h2>dance like<br>nobody's <span class="r">watching.</span></h2>
     <div class="sticker oneof">one<br>of a<br>kind</div>
     <div class="collage reveal">
-      <figure class="polaroid"><img src="images/dance.jpg" alt="ステージで踊る女の子" width="508" height="520" style="--ar:1/1"><figcaption>feel the beat</figcaption></figure>
-      <figure class="polaroid"><img src="images/rack.jpg" alt="ハンガーラックに並ぶ古着" width="656" height="464" style="--ar:4/3"><figcaption>one of a kind</figcaption></figure>
-      <figure class="polaroid"><img src="images/shopgirl.jpg" alt="古着屋で服を選ぶ女の子" width="352" height="364" style="--ar:1/1"><figcaption>found it!</figcaption></figure>
-      <figure class="polaroid"><img src="images/street.jpg" alt="ストリートを歩く女の子たち" width="472" height="332" style="--ar:4/3"><figcaption>girl power</figcaption></figure>
-      <figure class="polaroid"><img src="images/tee.jpg" alt="ヴィンテージのプリントTシャツ" width="416" height="400" style="--ar:1/1"><figcaption>the beat goes on</figcaption></figure>
-      <figure class="polaroid"><img src="images/records.jpg" alt="レコードと古着が並ぶ店内" width="428" height="288" style="--ar:4/3"><figcaption>good music, good vibes</figcaption></figure>
+      <figure class="polaroid"><img src="images/dance.jpg" alt="ステージで踊る女の子" width="534" height="702"><figcaption>feel the beat</figcaption></figure>
+      <figure class="polaroid"><img src="images/denim.jpg" alt="ダメージデニムのワイドパンツ" width="516" height="597"><figcaption>one of a kind</figcaption></figure>
+      <figure class="polaroid"><img src="images/skate.jpg" alt="スケートボードに座る、バンドTシャツの女の子" width="720" height="1110"><figcaption>off duty</figcaption></figure>
+      <figure class="polaroid"><img src="images/cargo.jpg" alt="カーゴパンツとチェーンベルト" width="570" height="597"><figcaption>mix style</figcaption></figure>
+      <figure class="polaroid"><img src="images/shopgirl.jpg" alt="古着屋で服を選ぶ女の子" width="504" height="504"><figcaption>found it!</figcaption></figure>
+      <figure class="polaroid"><img src="images/graphic-tee.jpg" alt="グラフィックTシャツとキャップ" width="531" height="597"><figcaption>good vibe only.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -250,7 +250,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
 
 <div class="finale wrap">
   <div class="big">find your<br><span class="r">Beat !</span></div>
-  <div class="hand">just in. new arrival.</div>
+  <div class="hand">From Vintage, To My Beat.</div>
 </div>
 </main>
 
