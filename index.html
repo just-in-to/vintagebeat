@@ -15,11 +15,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Special+Elite&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#ece6da; --paper2:#e2dbcc; --ink:#151413; --red:#c8202a; --tape:rgba(226,214,180,.82);
-  --hand:'Caveat',cursive; --type:'Special Elite',monospace; --jp:'Zen Kaku Gothic New',sans-serif; --poster:'Anton',sans-serif;
+  --en:'Archivo Black','Noto Sans JP',sans-serif; --hand:var(--en); --type:var(--en); --poster:var(--en); --jp:'Archivo Black','Noto Sans JP',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:clip}
@@ -35,7 +35,7 @@ img{display:block;max-width:100%}
 header{position:sticky;top:0;z-index:20;background:rgba(236,230,218,.92);backdrop-filter:blur(6px);border-bottom:2px solid var(--ink)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .from{font-family:var(--type);font-size:11px;line-height:1.3}
-.from b{font-family:var(--jp);font-weight:900;font-size:16px;margin-right:6px}
+.from b{font-weight:400;font-size:16px;margin-right:6px}
 nav{display:flex;gap:18px;font-family:var(--type);font-size:13px}
 nav a{text-decoration:none}
 nav a:hover{color:var(--red)}
@@ -46,16 +46,16 @@ nav a:hover{color:var(--red)}
 .hero{padding:56px 0 40px;position:relative}
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
 .logo{width:min(560px,100%)}
-.tag{font-family:var(--hand);font-size:clamp(26px,3.4vw,36px);margin-top:6px;border-bottom:3px solid var(--ink);display:inline-block;padding-right:40px;transform:rotate(-1.5deg)}
-.lead{font-weight:900;font-size:clamp(19px,2.4vw,26px);letter-spacing:.12em;line-height:1.8;margin-top:28px}
+.tag{font-family:var(--hand);font-size:clamp(20px,2.6vw,28px);margin-top:6px;border-bottom:3px solid var(--ink);display:inline-block;padding-right:40px;transform:rotate(-1.5deg)}
+.lead{font-weight:900;font-family:'Noto Sans JP',sans-serif;font-size:clamp(19px,2.4vw,26px);letter-spacing:.12em;line-height:1.8;margin-top:28px}
 .sub{font-size:14px;margin-top:16px;max-width:440px}
-.stamp{position:absolute;font-family:var(--type);color:var(--red);border:2px solid var(--red);border-radius:50%;padding:14px 22px;text-align:center;line-height:1.35;font-size:14px;transform:rotate(-10deg)}
+.stamp{position:absolute;font-family:var(--type);color:var(--red);border:2px solid var(--red);border-radius:50%;padding:14px 22px;text-align:center;line-height:1.35;font-size:12px;transform:rotate(-10deg)}
 .tagrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .tagrow .stamp{position:static;flex:none}
 
 .polaroid{background:#f7f4ec;padding:10px 10px 14px;box-shadow:0 6px 18px rgba(0,0,0,.22);position:relative}
 .polaroid img{width:100%;height:auto;aspect-ratio:var(--ar,3/4);object-fit:cover;filter:contrast(1.04) saturate(.92)}
-.polaroid figcaption{font-family:var(--hand);font-size:22px;text-align:center;margin-top:6px;line-height:1.2}
+.polaroid figcaption{font-family:var(--hand);font-size:15px;letter-spacing:.02em;text-align:center;margin-top:6px;line-height:1.2}
 .polaroid::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;background:var(--tape);transform:translateX(-50%) rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,.1)}
 .hero .polaroid{transform:rotate(2.5deg);max-width:380px;justify-self:center}
 
@@ -68,21 +68,21 @@ nav a:hover{color:var(--red)}
 .btn.black{background:var(--ink);color:var(--paper)}
 
 /* marquee */
-.ticker{background:var(--ink);color:var(--paper);font-family:var(--poster);font-size:26px;letter-spacing:.06em;white-space:nowrap;overflow:hidden;padding:8px 0;transform:rotate(-1deg);margin:20px -10px}
+.ticker{background:var(--ink);color:var(--paper);font-family:var(--poster);font-size:22px;letter-spacing:.06em;white-space:nowrap;overflow:hidden;padding:8px 0;transform:rotate(-1deg);margin:20px -10px}
 .ticker span{display:inline-block;animation:run 28s linear infinite}
 .ticker em{color:var(--red);font-style:normal}
 @keyframes run{to{transform:translateX(-50%)}}
 
 section{padding:80px 0;position:relative}
 .label{display:inline-block;background:var(--ink);color:var(--paper);font-family:var(--type);font-size:13px;padding:3px 12px;letter-spacing:.1em}
-h2{font-family:var(--poster);font-weight:400;font-size:clamp(44px,7vw,84px);line-height:1;margin:14px 0 26px;letter-spacing:.01em}
+h2{font-family:var(--poster);font-weight:400;font-size:clamp(34px,5.6vw,66px);line-height:1.05;margin:14px 0 26px;letter-spacing:-.01em}
 h2 .r{color:var(--red)}
 
 /* concept */
 .concept .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .concept p{font-weight:700;font-size:16px;margin-bottom:20px}
 .concept .accent{color:var(--red)}
-.note{background:#f4efe3 repeating-linear-gradient(transparent 0 31px,#cfc6b3 31px 32px);padding:18px 26px 18px 30px;font-family:var(--hand);font-size:24px;line-height:32px;transform:rotate(-2deg);box-shadow:0 4px 12px rgba(0,0,0,.15);max-width:300px;clip-path:polygon(0 2%,6% 0,14% 2%,24% 0,36% 2%,48% 0,60% 2%,72% 0,84% 2%,94% 0,100% 2%,100% 100%,0 100%)}
+.note{background:#f4efe3 repeating-linear-gradient(transparent 0 31px,#cfc6b3 31px 32px);padding:18px 26px 18px 30px;font-family:var(--hand);font-size:16px;line-height:32px;transform:rotate(-2deg);box-shadow:0 4px 12px rgba(0,0,0,.15);max-width:300px;clip-path:polygon(0 2%,6% 0,14% 2%,24% 0,36% 2%,48% 0,60% 2%,72% 0,84% 2%,94% 0,100% 2%,100% 100%,0 100%)}
 .concept-side{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
 .concept-side .polaroid:nth-child(2){transform:rotate(3deg);margin-top:40px}
 
@@ -96,17 +96,17 @@ h2 .r{color:var(--red)}
 .collage .polaroid:nth-child(5){grid-column:6/9;transform:rotate(-2deg)}
 .collage .polaroid:nth-child(6){grid-column:9/13;transform:rotate(2.5deg);margin-top:20px}
 .sticker{position:absolute;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--poster);line-height:1;transform:rotate(-12deg);z-index:2}
-.sticker.oneof{background:var(--red);color:#fff;width:110px;height:110px;font-size:24px;right:4%;top:60px}
+.sticker.oneof{background:var(--red);color:#fff;width:110px;height:110px;font-size:18px;right:4%;top:60px}
 
 /* items */
 .items .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
 .poster{background:var(--paper);border:3px solid var(--ink);padding:28px;position:relative;box-shadow:8px 8px 0 var(--red)}
-.poster h3{font-family:var(--poster);font-weight:400;font-size:clamp(48px,7vw,76px);line-height:.95}
-.poster ul{list-style:none;font-family:var(--type);font-size:20px;margin-top:18px;line-height:1.7}
+.poster h3{font-family:var(--poster);font-weight:400;font-size:clamp(38px,5.4vw,60px);line-height:1}
+.poster ul{list-style:none;font-family:var(--type);font-size:17px;margin-top:18px;line-height:1.7}
 .poster ul li::before{content:"- "}
 .poster .checker{height:16px;margin:20px -28px -28px;background:repeating-conic-gradient(var(--ink) 0 25%,var(--paper) 0 50%) 0 0/16px 16px}
 .items p{font-weight:700}
-.handnote{font-family:var(--hand);font-size:30px;color:var(--red);transform:rotate(-3deg);display:inline-block;margin-top:14px;border-bottom:2px solid var(--red);line-height:1.2}
+.handnote{font-family:var(--hand);font-size:20px;color:var(--red);transform:rotate(-3deg);display:inline-block;margin-top:14px;border-bottom:2px solid var(--red);line-height:1.2}
 
 /* shop */
 .shop{background:var(--ink);color:var(--paper);text-align:center}
@@ -121,9 +121,9 @@ h2 .r{color:var(--red)}
 
 /* footer */
 .finale{padding:90px 0 40px;text-align:left;overflow:hidden}
-.finale .big{font-family:var(--poster);font-size:clamp(64px,13vw,170px);line-height:.9}
+.finale .big{font-family:var(--poster);font-size:clamp(52px,10.5vw,140px);line-height:.95;letter-spacing:-.02em}
 .finale .big .r{color:var(--red)}
-.finale .hand{font-family:var(--hand);font-size:28px;margin-top:10px}
+.finale .hand{font-family:var(--hand);font-size:20px;margin-top:10px}
 footer{border-top:2px solid var(--ink);padding:26px 0 40px;font-family:var(--type);font-size:12px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
 footer a{text-decoration:none;border-bottom:1px solid currentColor}
@@ -145,9 +145,9 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px}
   .hero .polaroid{max-width:300px}
   .collage{grid-template-columns:1fr 1fr;gap:18px}
   .collage .polaroid:nth-child(n){grid-column:auto;margin-top:0}
-  .sticker.oneof{width:84px;height:84px;font-size:18px;top:30px}
+  .sticker.oneof{width:84px;height:84px;font-size:14px;top:30px}
   section{padding:60px 0}
-  .polaroid figcaption{font-size:19px}
+  .polaroid figcaption{font-size:13px}
 }
 </style>
 </head>
